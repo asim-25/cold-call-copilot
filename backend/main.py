@@ -4,9 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from supabase import create_client, Client
 from dotenv import load_dotenv
-from google import genai
-
-load_dotenv()
+import google.generativeai as genai
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_SERVICE_ROLE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
